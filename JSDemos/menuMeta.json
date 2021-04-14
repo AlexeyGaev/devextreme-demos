@@ -100,10 +100,10 @@
             "Title": "Record Paging",
             "Name": "RecordPaging",
             "Widget": "DataGrid",
+            "Badge": "Updated",
             "MvcAdditionalFiles": [
-              "/Controllers/ApiControllers/DataGridCustomersController.cs",
-              "/Models/Customer.cs",
-              "/Models/SampleData/Customers.cs"
+              "/Controllers/ApiControllers/DataGridScrollingController.cs",
+              "/Models/User.cs"
             ],
             "DemoType": "Web"
           },
@@ -331,7 +331,7 @@
             ]
           },
           {
-            "Title": "Edit State Management (CTP)",
+            "Title": "Edit State Management",
             "Name": "EditStateManagement",
             "DocUrl": "",
             "Widget": "DataGrid",
@@ -437,46 +437,48 @@
       {
         "Name": "Row Drag & Drop",
         "Equivalents": "",
-        "Demos": [{
-          "Title": "Local Reordering",
-          "Name": "LocalReordering",
-          "Widget": "DataGrid",
-          "DemoType": "Web",
-          "MvcAdditionalFiles": [
-            "/Scripts/data/localReordering.js",
-            "/Models/RowReorderingTask.cs"
-          ]
-        },
-        {
-          "Title": "Remote Reordering",
-          "Name": "RemoteReordering",
-          "Badge": "Updated",
-          "Widget": "DataGrid",
-          "DemoType": "Web",
-          "Modules": "devextreme-aspnet-data-nojquery",
-          "MvcAdditionalFiles": [
-            "/Controllers/ApiControllers/DataGridRowReorderingController.cs",
-            "/Models/RowReorderingTask.cs",
-            "/Models/SampleData/RowReorderingTasks.cs",
-            "/Models/DataGrid/InMemoryRowReorderingTasksDataContext.cs"
-          ]
-        },
-        {
-          "Title": "Drag & Drop Between Two Grids",
-          "Name": "DnDBetweenGrids",
-          "Widget": "DataGrid",
-          "DemoType": "Web",
-          "Modules": "devextreme-aspnet-data-nojquery",
-          "Equivalents": "Drag and Drop Between Two Grids",
-          "MvcAdditionalFiles": [
-            "/Views/DataGrid/DnDBetweenGridsPartial.cshtml",
-            "/Controllers/ApiControllers/DnDBetweenGridsController.cs",
-            "/Models/RowReorderingTask.cs",
-            "/Models/SampleData/RowReorderingTasks.cs",
-            "/Models/DataGrid/InMemoryRowReorderingTasksDataContext.cs",
-	     "/Scripts/data/priorities.js"
-          ]
-        }]
+        "Demos": [
+          {
+            "Title": "Local Reordering",
+            "Name": "LocalReordering",
+            "Widget": "DataGrid",
+            "DemoType": "Web",
+            "MvcAdditionalFiles": [
+              "/Scripts/data/localReordering.js",
+              "/Models/RowReorderingTask.cs"
+            ]
+          },
+          {
+            "Title": "Remote Reordering",
+            "Name": "RemoteReordering",
+            "Badge": "Updated",
+            "Widget": "DataGrid",
+            "DemoType": "Web",
+            "Modules": "devextreme-aspnet-data-nojquery",
+            "MvcAdditionalFiles": [
+              "/Controllers/ApiControllers/DataGridRowReorderingController.cs",
+              "/Models/RowReorderingTask.cs",
+              "/Models/SampleData/RowReorderingTasks.cs",
+              "/Models/DataGrid/InMemoryRowReorderingTasksDataContext.cs"
+            ]
+          },
+          {
+            "Title": "Drag & Drop Between Two Grids",
+            "Name": "DnDBetweenGrids",
+            "Widget": "DataGrid",
+            "DemoType": "Web",
+            "Modules": "devextreme-aspnet-data-nojquery",
+            "Equivalents": "Drag and Drop Between Two Grids",
+            "MvcAdditionalFiles": [
+              "/Views/DataGrid/DnDBetweenGridsPartial.cshtml",
+              "/Controllers/ApiControllers/DnDBetweenGridsController.cs",
+              "/Models/RowReorderingTask.cs",
+              "/Models/SampleData/RowReorderingTasks.cs",
+              "/Models/DataGrid/InMemoryRowReorderingTasksDataContext.cs",
+              "/Scripts/data/priorities.js"
+            ]
+          }
+        ]
       },
       {
         "Name": "Selection",
@@ -692,7 +694,6 @@
           {
             "Title": "Total Summaries",
             "Name": "GridSummaries",
-            "DocUrl": "Guide/UI_Components/DataGrid/Summaries/Total_Summary/",
             "Widget": "DataGrid",
             "Modules": "globalize--vue&react",
             "MvcAdditionalFiles": [
@@ -705,7 +706,6 @@
           {
             "Title": "Group Summaries",
             "Name": "GroupSummaries",
-            "DocUrl": "Guide/UI_Components/DataGrid/Summaries/Group_Summary/",
             "Widget": "DataGrid",
             "MvcAdditionalFiles": [
               "/Controllers/ApiControllers/DataGridSummariesController.cs",
@@ -717,7 +717,6 @@
           {
             "Title": "Custom Summaries",
             "Name": "CustomSummaries",
-            "DocUrl": "Guide/UI_Components/DataGrid/Summaries/Custom_Aggregate_Function/",
             "Widget": "DataGrid",
             "MvcAdditionalFiles": [
               "/Controllers/ApiControllers/DataGridCustomSummariesController.cs",
@@ -729,7 +728,6 @@
           {
             "Title": "Recalculate While Editing",
             "Name": "RecalculateWhileEditing",
-            "DocUrl": "",
             "Widget": "DataGrid",
             "MvcAdditionalFiles": [
               "/Models/Order.cs",
@@ -814,7 +812,7 @@
           {
             "Title": "Overview",
             "Name": "ExportToPDF",
-            "Badge": "New",
+            "Badge": "Updated",
             "Widget": "DataGrid",
             "Modules": "jspdf&jspdf-autotable",
             "MvcAdditionalFiles": [
@@ -1132,7 +1130,6 @@
       {
         "Name": "Export to Excel",
         "Equivalents": "",
-        "Badge": "New",
         "Demos": [
           {
             "Title": "Overview",
@@ -1205,7 +1202,6 @@
           {
             "Title": "Simple Array: Plain Structure",
             "Name": "SimpleArrayPlainStructure",
-            "DocUrl": "Guide/UI_Components/TreeList/Data_Binding/Use_Plain_Data/",
             "Widget": "TreeList",
             "MvcAdditionalFiles": [
               "/Scripts/data/employeesPS.js"
@@ -1215,7 +1211,6 @@
           {
             "Title": "Simple Array: Hierarchical Structure",
             "Name": "SimpleArrayHierarchicalStructure",
-            "DocUrl": "Guide/UI_Components/TreeList/Data_Binding/Use_Hierarchical_Data/",
             "Widget": "TreeList",
             "MvcAdditionalFiles": [
               "/Scripts/data/employeesHS.js"
@@ -1237,7 +1232,6 @@
             "Title": "Web API Service",
             "Name": "WebAPIService",
             "Equivalents": "webapi",
-            "DocUrl": "Guide/Data_Binding/Specify_a_Data_Source/Custom_Data_Sources/",
             "Widget": "TreeList",
             "Modules": "devextreme-aspnet-data-nojquery",
             "MvcAdditionalFiles": [
@@ -1259,7 +1253,6 @@
           {
             "Title": "Multiple Sorting",
             "Name": "MultipleSorting",
-            "DocUrl": "Guide/UI_Components/TreeList/Sorting/",
             "Widget": "TreeList",
             "MvcAdditionalFiles": [
               "/Controllers/ApiControllers/TreeListTasksController.cs",
@@ -1620,7 +1613,6 @@
           {
             "Title": "Simple Array",
             "Name": "SimpleArray",
-            "DocUrl": "Guide/UI_Components/Scheduler/Overview/",
             "Widget": "Scheduler",
             "DemoType": "Web"
           },
@@ -1641,7 +1633,6 @@
             "DemoType": "Web"
           },
           {
-            "DocUrl": "Guide/Data_Layer/Data_Layer/#Data_Modification/Integration_with_Push_Services",
             "Title": "SignalR Service",
             "Name": "SignalRService",
             "Widget": "Scheduler",
@@ -1671,7 +1662,6 @@
           {
             "Title": "Basic Views",
             "Name": "BasicViews",
-            "DocUrl": "Guide/UI_Components/Scheduler/Views/View_Types/",
             "Widget": "Scheduler",
             "MvcAdditionalFiles": [
               "/Models/Appointment.cs",
@@ -1682,7 +1672,6 @@
           {
             "Title": "Timelines",
             "Name": "Timelines",
-            "DocUrl": "Guide/UI_Components/Scheduler/Views/#Timeline_Views",
             "Widget": "Scheduler",
             "MvcAdditionalFiles": [
               "/Models/EmployeeTask.cs",
@@ -1694,7 +1683,6 @@
             "Title": "Agenda",
             "Name": "Agenda",
             "Badge": "Updated",
-            "DocUrl": "Guide/UI_Components/Scheduler/Views/View_Types/#Agenda_View",
             "Widget": "Scheduler",
             "MvcAdditionalFiles": [
               "/Models/SampleData/AgendaTasks.cs"
@@ -1710,7 +1698,6 @@
           {
             "Title": "Current Time Indicator",
             "Name": "CurrentTimeIndicator",
-            "DocUrl": "Guide/UI_Components/Scheduler/Current_Time_Indication/",
             "Widget": "Scheduler",
             "MvcAdditionalFiles": [
               "/Models/DynamicAppointment.cs",
@@ -1781,14 +1768,19 @@
               "/Models/SampleData/PriorityResources.cs"
             ],
             "DemoType": "Web"
-          },
+          }
+        ]
+      },
+      {
+        "Name": "Virtual Scrolling",
+        "Equivalents": "",
+        "Demos": [
           {
             "Title": "Virtual Scrolling",
-            "Badge": "New",
+            "Badge": "Updated",
             "Name": "VirtualScrolling",
             "Widget": "Scheduler",
-            "MvcAdditionalFiles": [
-            ],
+            "MvcAdditionalFiles": [],
             "DemoType": "Web"
           }
         ]
@@ -1927,7 +1919,7 @@
     ]
   },
   {
-    "Name": "Html Editor (CTP)",
+    "Name": "Html Editor",
     "Equivalents": "dxHtmlEditor, dx-htmleditor",
     "Groups": [
       {
@@ -1939,8 +1931,7 @@
             "Name": "Overview",
             "DocUrl": "Guide/UI_Components/HtmlEditor/Overview/",
             "Widget": "HtmlEditor",
-            "DemoType": "Web",
-            "Badge": "Updated"
+            "DemoType": "Web"
           }
         ]
       },
@@ -1998,8 +1989,7 @@
             "MvcDescription": "",
             "NetCoreDescription": "",
             "MvcAdditionalFiles": [],
-            "DemoType": "Web",
-            "Badge": "New"
+            "DemoType": "Web"
           }
         ]
       }
@@ -2007,7 +1997,6 @@
   },
   {
     "Name": "Diagram",
-    "Badge": "New",
     "Equivalents": "dxDiagram, dx-diagram, graph, flow, process, orgchart",
     "Groups": [
       {
@@ -2145,8 +2134,7 @@
             "DocUrl": "",
             "Widget": "Diagram",
             "DemoType": "Web",
-            "WideDemo": true,
-            "Badge": "New"
+            "WideDemo": true
           }
         ]
       },
@@ -2185,7 +2173,7 @@
             "DemoType": "Web",
             "WideDemo": true,
             "Modules": "whatwg-fetch",
-            "Badge": "New"
+            "Badge": "Updated"
           },
           {
             "Title": "Editing Restrictions",
@@ -2194,7 +2182,7 @@
             "Widget": "Diagram",
             "DemoType": "Web",
             "WideDemo": true,
-            "Badge": "New"
+            "Badge": "Updated"
           }
         ]
       },
@@ -2209,8 +2197,7 @@
             "Widget": "Diagram",
             "DemoType": "Web",
             "WideDemo": true,
-            "Modules": "whatwg-fetch",
-            "Badge": "Updated"
+            "Modules": "whatwg-fetch"
           }
         ]
       },
@@ -3261,7 +3248,7 @@
                 ]
               },
               {
-                "Title": "Zooming and Scrolling",
+                "Title": "Zooming and Panning",
                 "Name": "ZoomingAndScrolling",
                 "DocUrl": "Guide/UI_Components/Chart/Zooming_and_Panning/",
                 "Widget": "Charts",
@@ -3269,10 +3256,10 @@
                   "/Models/SampleData/PointsData.cs"
                 ],
                 "DemoType": "Viz",
-                "Equivalents": "visualRange, zoomAndPan"
+                "Equivalents": "visualRange, zoomAndPan, scrolling"
               },
               {
-                "Title": "Zooming and Scrolling API",
+                "Title": "Zooming and Panning API",
                 "Name": "ZoomingAndScrollingAPI",
                 "DocUrl": "Guide/UI_Components/Chart/Zooming_and_Panning/#Using_the_RangeSelector_Widget",
                 "Widget": "Charts",
@@ -3280,25 +3267,25 @@
                   "/Models/SampleData/PointsData.cs"
                 ],
                 "DemoType": "Viz",
-                "Equivalents": "visualRange, rangeSelector"
+                "Equivalents": "visualRange, rangeSelector, scrolling"
               },
               {
-                "Title": "Discrete Axis Zooming and Scrolling",
+                "Title": "Discrete Axis Zooming and Panning",
                 "Name": "DiscreteAxisZoomingAndScrolling",
                 "DocUrl": "Guide/UI_Components/Chart/Zooming_and_Panning/#Using_the_RangeSelector_Widget",
                 "Widget": "Charts",
                 "DemoType": "Viz",
-                "Equivalents": "orientation, rangeSelector, visualRange, legend"
+                "Equivalents": "orientation, rangeSelector, visualRange, legend, scrolling"
               },
               {
-                "Title": "Polar Chart Zooming and Scrolling API",
+                "Title": "Polar Chart Zooming and Panning API",
                 "Name": "PolarChartZoomingAndScrollingAPI",
                 "Widget": "Charts",
                 "MvcAdditionalFiles": [
                   "/Models/SampleData/StochasticData.cs"
                 ],
                 "DemoType": "Viz",
-                "Equivalents": "visualRange, rangeSelector"
+                "Equivalents": "visualRange, rangeSelector, scrolling"
               }
             ]
           }
@@ -3373,7 +3360,21 @@
           {
             "Title": "Chart Appearance",
             "Name": "ChartAppearance",
-            "Badge": "Updated",
+            "Widget": "Gantt",
+            "DemoType": "Web",
+            "WideDemo": true,
+            "MvcAdditionalFiles": [
+              "/Models/SampleData/GanttData.cs",
+              "/Models/Gantt/Dependency.cs",
+              "/Models/Gantt/Resource.cs",
+              "/Models/Gantt/ResourceAssignment.cs",
+              "/Models/Gantt/Task.cs"
+            ]
+          },
+          {
+            "Title": "Task Template",
+            "Name": "TaskTemplate",
+            "Badge": "New",
             "Widget": "Gantt",
             "DemoType": "Web",
             "WideDemo": true,
@@ -3402,7 +3403,6 @@
           {
             "Title": "Context Menu",
             "Name": "ContextMenu",
-            "Badge": "New",
             "Widget": "Gantt",
             "DemoType": "Web",
             "WideDemo": true,
@@ -4486,7 +4486,6 @@
           {
             "Title": "Overview",
             "Name": "Overview",
-            "DocUrl": "Guide/UI_Components/Form/Overview/",
             "Widget": "Form",
             "MvcAdditionalFiles": [
               "/Models/Company.cs",
@@ -4791,7 +4790,7 @@
               {
                 "Title": "Physical File System",
                 "Name": "BindingToFileSystem",
-                "DocUrl": "ApiReference/UI_Components/dxFileManager/File_Providers/Remote/",
+                "DocUrl": "ApiReference/UI_Components/dxFileManager/File_System_Providers/Remote/",
                 "Widget": "FileManager",
                 "DemoType": "Web",
                 "MvcAdditionalFiles": [
@@ -4834,7 +4833,7 @@
               {
                 "Title": "Hierarchical JS Structure",
                 "Name": "BindingToHierarchicalStructure",
-                "DocUrl": "ApiReference/UI_Components/dxFileManager/File_Providers/Array/",
+                "DocUrl": "ApiReference/UI_Components/dxFileManager/File_System_Providers/Object/",
                 "Widget": "FileManager",
                 "DemoType": "Web",
                 "MvcAdditionalFiles": [
@@ -4913,7 +4912,6 @@
           {
             "Title": "Custom Drop Zone",
             "Name": "CustomDropzone",
-            "Badge": "New",
             "DocUrl": "",
             "Widget": "FileUploader"
           }
