@@ -4,7 +4,6 @@
     :current-date="currentDate"
     :views="views"
     :height="600"
-    :first-day-of-week="0"
     :start-day-hour="8"
     :end-day-hour="20"
     :cell-duration="60"
@@ -17,7 +16,10 @@
 </template>
 <script>
 import DxScheduler from 'devextreme-vue/scheduler';
-import { humans, generateAppointments } from './data.js';
+import {
+  resources,
+  generateAppointments
+} from './data.js';
 
 export default {
   components: {
@@ -25,7 +27,7 @@ export default {
   },
   data() {
     return {
-      dataSource: generateAppointments(),
+      dataSource: generateAppointments(new Date(2021, 1, 1), new Date(2021, 1, 28), 8, 20),
       currentDate: new Date(2021, 1, 2),
       views: [
         {
@@ -42,14 +44,15 @@ export default {
           groupOrientation: 'horizontal'
         }
       ],
-      currentView: 'timelineWorkWeek',
+      currentView: 'Timeline',
       scrolling: {
         mode: 'virtual'
       },
       groups: ['humanId'],
       resources: [{
         fieldExpr: 'humanId',
-        dataSource: humans
+        dataSource: resources,
+        label: 'Employee'
       }]
     };
   },

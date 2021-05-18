@@ -1,39 +1,44 @@
 $(function () {
-    var appointments = generateAppointments();
+    var startDay = new Date(2021, 1, 1);
+    var endDay = new Date(2021, 1, 28);
+  
+    var startDayHour = 8
+    var endDayHour = 20
+
+    var appointments = generateAppointments(startDay, endDay, startDayHour, endDayHour);
 
     $('#scheduler').dxScheduler({
         height: 600,
         currentDate: new Date(2021, 1, 2),
         dataSource: appointments,
-        views: [    
+        views: [
             {
-                type: 'timelineWorkWeek',
-                name: 'Timeline',
-                groupOrientation: 'vertical'
+                type: "timelineWorkWeek",
+                name: "Timeline",
+                groupOrientation: "vertical"
             },
             {
-                type: 'workWeek',
-                groupOrientation: 'vertical'
+                type: "workWeek",
+                groupOrientation: "vertical"
             },
             {
-                type: 'month',
-                groupOrientation: 'horizontal'
+                type: "month",
+                groupOrientation: "horizontal"
             }
         ],
-        currentView: "timelineWorkWeek",
-        firstDayOfWeek: 0,
-        startDayHour: 8,
-        endDayHour: 20,
+        currentView: "Timeline",
+        startDayHour: startDayHour,
+        endDayHour: endDayHour,
         cellDuration: 60,
         scrolling: {
-            mode: 'virtual'
+            mode: "virtual"
         },
         showAllDayPanel: false,
         groups: ["humanId"],
         resources: [{
             fieldExpr: "humanId",
-            allowMultiple: false,
-            dataSource: resources
+            dataSource: resources,
+            label: "Employee"
         }]
     });
 });
